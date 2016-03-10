@@ -10,9 +10,10 @@ $(function(){
 
 function getRequest(searchTerm){
   var params = {
-    part: 'snippet',
-    key: 'AIzaSyD1GKcq922Qe8V0Z0UWDT-PI1CpoFIx2ZQ',
-    q:'prank'
+    'part': 'snippet',
+    'key': 'AIzaSyD1GKcq922Qe8V0Z0UWDT-PI1CpoFIx2ZQ',
+    'q':'prank',
+    videoDuration: 'short'
   };
   url = 'https://www.googleapis.com/youtube/v3/search';
 
@@ -22,11 +23,12 @@ function getRequest(searchTerm){
 }
 
 
-function showResults(results){
+function showResults(videos){
   var html = "";
-  $.each(results, function(index,value){
-    html += '<p>' + value.Title + '</p>';
-    console.log(value.Title);
+  $.each(videos, function(index,video){
+    console.log(video.snippet.thumbnails.medium.url);
+      html = html + "<li><p>" + video.snippet.title +
+        "</p><img src='" +  video.snippet.thumbnails.high.url + "'/></li>" ;
   });
   $('#search-results').html(html);
 }
