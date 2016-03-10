@@ -10,10 +10,11 @@ $(function(){
 
 function getRequest(searchTerm){
   var params = {
-    'part': 'snippet',
-    'key': 'AIzaSyD1GKcq922Qe8V0Z0UWDT-PI1CpoFIx2ZQ',
-    'q':'prank',
-    videoDuration: 'short'
+    part: 'snippet',
+    key: 'AIzaSyD1GKcq922Qe8V0Z0UWDT-PI1CpoFIx2ZQ',
+    q:'prank',
+    maxResults:6,
+    order: 'viewCount'
   };
   url = 'https://www.googleapis.com/youtube/v3/search';
 
