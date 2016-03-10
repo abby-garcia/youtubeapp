@@ -14,7 +14,7 @@ function getRequest(searchTerm){
     key: 'AIzaSyD1GKcq922Qe8V0Z0UWDT-PI1CpoFIx2ZQ',
     q:'prank'
   };
-  url = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=prank&key=AIzaSyD1GKcq922Qe8V0Z0UWDT-PI1CpoFIx2ZQ';
+  url = 'https://www.googleapis.com/youtube/v3/search';
 
   $.getJSON(url, params, function(data){
     showResults(data.Search);
