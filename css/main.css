@@ -8,6 +8,7 @@ body{
 	font-family: 'Codystar', cursive;
 	text-align: center;
 	font-size: 10em;
+	color:white;
 	
 }
 
@@ -15,6 +16,7 @@ body{
 	font-family: 'Monofett', cursive;
 	text-align: center;
 	font-size: 3em;
+	color: #D1D0CE;
 }
 
 #search-results, form {
