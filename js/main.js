@@ -33,8 +33,10 @@ function showResults(videos){
   $.each(videos, function(index,video){
     console.log(video.snippet.thumbnails.medium.url);
       html = html + "<li><p class= 'results'>" + video.snippet.title +
-        "</p><img src='" +  video.snippet.thumbnails.high.url + "'/></li>" ;
+      "</p> <a href='https://www.youtube.com/watch?v=" + video.id.videoId +"'> <img src='" +  video.snippet.thumbnails.medium.url+ "'/></a></li>" ;
   });
   $('#search-results').html(html);
 }
 
+
+//
