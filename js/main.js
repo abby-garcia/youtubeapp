@@ -1,10 +1,5 @@
 
 
-
-
-
-
-
 $(function(){
 
   $('#search-term').submit(function(event){
@@ -18,16 +13,17 @@ $(function(){
 
 function getRequest(searchTerm){
   var params = {  // why do we need to put quotes around part, key, q, maxResults?
-    "part": 'snippet',
-    "key": 'AIzaSyD1GKcq922Qe8V0Z0UWDT-PI1CpoFIx2ZQ',
-    "q":'prank',
-    "maxResults":6,
+    part: "snippet",
+    key: "AIzaSyD1GKcq922Qe8V0Z0UWDT-PI1CpoFIx2ZQ",
+    q: searchTerm + ' prank',
+    maxResults:6,
     order: 'viewCount'
   };
   url = 'https://www.googleapis.com/youtube/v3/search';
 
   $.getJSON(url, params, function(data){
-    showResults(data.Search);
+    console.log(data);
+    showResults(data.items);
   });
 }
 

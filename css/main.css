@@ -8,44 +8,7 @@ body{
 	font-family: 'Codystar', cursive;
 	text-align: center;
 	font-size: 10em;
-	-webkit-animation-name: flash;
-  animation-name: flash;
-
-/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
-
-@-webkit-keyframes pulse {
-  from {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-
-  50% {
-    -webkit-transform: scale3d(1.05, 1.05, 1.05);
-    transform: scale3d(1.05, 1.05, 1.05);
-  }
-
-  to {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-}
-
-@keyframes pulse {
-  from {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-
-  50% {
-    -webkit-transform: scale3d(1.05, 1.05, 1.05);
-    transform: scale3d(1.05, 1.05, 1.05);
-  }
-
-  to {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-}
+	
 }
 
 .instructions h4{
@@ -54,6 +17,19 @@ body{
 	font-size: 3em;
 }
 
-#search-results{
+#search-results, form {
 	text-align: center;
 }
+
+
+li{
+	list-style: none;
+}
+
+
+.results {
+	font-family: 'Nunito';
+	font-size: 2em;
+	color:white;
+}
+
